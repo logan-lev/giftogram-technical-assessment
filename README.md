@@ -4,7 +4,8 @@ This project was done as a technical assessment for Giftogram.
 The amount of time taken completing this assessment.
 # Steps Taken
 The steps taken to complete this assessment:
-1. Installing dependencies
+1. Installing dependencies (express, mysql2, bcrypt, dotenv, and nodemon)
+2. Added database schema with users table and messages table.
 # Issues
 The issues with the endpoint structure.
 # Suggested Improvements
