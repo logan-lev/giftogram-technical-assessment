@@ -1,7 +1,7 @@
 # Created by Logan Levine
 This project was done as a technical assessment for Giftogram.
 # Time Taken
-The amount of time taken completing this assessment was approximately six hours to complete.
+The amount of time taken completing this assessment was approximately six hours.
 # Steps Taken
 The steps taken to complete this assessment:
 1. Installing dependencies (express, mysql2, bcrypt, dotenv, and nodemon)
