@@ -6,6 +6,8 @@ The amount of time taken completing this assessment.
 The steps taken to complete this assessment:
 1. Installing dependencies (express, mysql2, bcrypt, dotenv, and nodemon)
 2. Added database schema with users table and messages table.
+3. Created MySQL connection pool in db.js and Express server skeleton in server.js
+4. Added the register endpoint to register new users with 3 separate error messages & bcrypt password hashing.
 # Issues
 The issues with the endpoint structure.
 # Suggested Improvements
