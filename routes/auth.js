@@ -26,16 +26,6 @@ router.post('/register', async (req, res) => {
     }
 
     try {
-        const [existing] = await pool .query('SELECT user_id FROM users WHERE email = ?', [email]);
-        
-        if (existing.length > 0) {
-            return res.status(409).json({
-                error_code: 101,
-                error_title: 'Email Already Registered',
-                error_message: 'An account with this email is already registered.'
-            });
-        }
-
         const password_hash = await bcrypt.hash(password, 10);
 
         const [result] = await pool.query('INSERT INTO users (email, password_hash, first_name, last_name) VALUES (?, ?, ?, ?)', [email, password_hash, first_name, last_name]);
@@ -47,6 +37,13 @@ router.post('/register', async (req, res) => {
             last_name
         });
     } catch (err) {
+        if (err.code === 'ER_DUP_ENTRY') {
+            return res.status(409).json({
+                error_code: 101,
+                error_title: 'Email Already Registered',
+                error_message: 'An account with this email is already registered.'
+            });
+        }
         console.error(err);
         res.status(500).json({
             error_code: 500,
