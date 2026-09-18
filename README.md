@@ -11,6 +11,7 @@ The steps taken to complete this assessment:
 5. Added the login endpoint to authenticate a user with 2 separate error messages checking emails & passwords.
 6. Added the send message endpoint with 2 separate error messages and a success message stating the message was sent.
 7. Added the view messages endpoint with 2 separate error messages as well as a response of the messages between 2 users.
+8. Added the list all users endpoint with 2 separate error messages and a response of all registered users except the requester.
 # Issues
 The issues with the endpoint structure.
 # Suggested Improvements
